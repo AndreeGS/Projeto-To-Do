@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qRXWHixMxZAQ6/rp869nvUSqaaBpq91j1Hb0JQN8BGrcdnrqG+AwkYOfApc9ervFz4oZ19AA8Z8TbnxUPr+g+Q==",
+  "dgSpecHash": "liNAuj9dOrSh56WVpDrtJXoxEHos3fuhdhtLBtZelMxBvCt6PX9ZejrYTr5QZ+HI5RX0nEdcj4X9QWyt1PrMIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projetos-C-Sharp\\API's\\API\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

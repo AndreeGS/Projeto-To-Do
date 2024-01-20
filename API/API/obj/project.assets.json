@@ -2440,11 +2440,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projetos-C-Sharp\\API's\\API\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projetos-C-Sharp\\API's\\API\\API\\API.csproj",
+      "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projetos-C-Sharp\\API's\\API\\API\\obj\\",
+      "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projeto-To-Do\\API\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
