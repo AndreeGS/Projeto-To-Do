@@ -1,0 +1,176 @@
+body{
+    width: 100%;
+    height: auto;
+    font-family: 'Inter';
+}
+
+/* Header */
+
+header{
+    background-image: url(../../img/Principal.png);
+    width: 100%;
+    height: 62vh;
+    max-height: 90vh;
+    background-size: 100%;
+    box-shadow: 0px 10px 15px 0px rgba(184,184,184,1);
+}
+
+.conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 33%;
+    margin-left: 56%;
+    
+}
+
+.conteudo h1{
+    font-size: 2.1vw;
+    font-weight: 600;
+    color: #02C986;
+
+    margin-top: 15%;
+}
+
+.conteudo p {
+    font-size: 1.5vw;
+    text-align: justify;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 5%;
+}
+
+.conteudo button{
+    color: #ffffff;
+    background-color: #02C986;
+    width: 24vw;
+    height: 6vh;
+    font-size: 1.7vw;
+    border-radius: 15px;
+    margin-top: 16%;
+    font-weight: 600;
+}
+
+/* Sobre */
+
+.sobre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 4%;
+}
+
+.sobre h1{
+    font-size: 2.5vw;
+    font-weight: 600;
+    color: #053f6f;
+    margin-bottom: 3%;
+    border-bottom: solid 4px #02C986;
+    width: 35%;
+    padding-left: 3%
+
+}
+
+
+.sobre p{
+    font-size: 1.4vw;
+    text-align: justify;
+    margin-bottom: 4%;
+}
+
+.sobre img{
+    width: 70vw;
+}
+
+.sobre button {
+    font-family: 'Inter';
+    font-size: 1.7vw;
+    background-color: #02C986;
+    width: 18vw;
+    height: 6vh;
+    border-radius: 15px;
+    color: #fff;
+    margin-top: 5%;
+    font-weight: 600;
+}
+
+/* Vantagens */
+
+.vantagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.boxVantagens{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0%;
+    margin-bottom: 10%;
+}
+
+
+.vantagens h1{
+    font-size: 2.5vw;
+    font-weight: 600;
+    color: #053f6f;
+    margin-bottom: 3%;
+    border-bottom: solid 4px #02C986;
+    width: 20%;
+    padding-left: 3%
+}
+
+.vantagens p{
+    width: 50%;
+    font-size: 1.3vw;
+    display: flex;
+    align-self: center;
+    text-align: center;
+}
+
+.lembrete, .semEstresse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lembrete{
+    margin-left: 10%;
+}
+
+.semEstresse{
+    margin-right: 10%;
+}
+
+.prioridade img{
+    margin-left: 39%;
+    width: 14vw;
+
+}
+
+.lembrete img, .semEstresse img{
+    width: 14vw;
+}
+
+.prioridade p{
+    margin-left: 25%;
+    margin-top: 2%;
+    width: 70%;
+}
+
+.lembrete p{
+    width: 70%;
+}
+
+.semEstresse p{
+    width: 70%;
+}
+
+.lembrete p, .semEstresse p{
+    margin-top: 2%;
+}
