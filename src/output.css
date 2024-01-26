@@ -596,6 +596,15 @@ video {
   background-color: rgb(2 37 65 / var(--tw-bg-opacity));
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
+.text-ciano {
+  --tw-text-opacity: 1;
+  color: rgb(2 201 134 / var(--tw-text-opacity));
+}
+
 .shadow-inner {
   --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
