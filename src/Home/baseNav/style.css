@@ -35,6 +35,9 @@ nav{
 }
 
 .navegacao ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -45,6 +48,15 @@ nav{
 .navegacao li {
     margin: 0 30px;
     font-size: 1vw;
+}
+
+
+.navegacao li:hover{
+    border-bottom: solid 4px #02C986;
+    border-radius: 10px;
+    color: #02C986;
+
+
 }
 
 /* Footer */
