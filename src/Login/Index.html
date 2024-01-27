@@ -35,27 +35,33 @@
         </section>
     </nav>
     <div class="flex h-screen bg-gray-100">
-        <div class="w-1/2">
-            <img src="" alt="">
+        <div id="fotoFundo" class="w-1/2">
+            <h3><em>"A organização é a chave para o sucesso. Mantenha suas metas claras e seu espaço de trabalho em ordem para alcançar o máximo de produtividade."</em></h3>
         </div>
-        <div class="w-1/2 bg-white p-10">
-            <h1 class="text-2xl font-semibold mb-6">Faça Login</h1>
-            <form action="">
-                <section class="email">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email-input">
-                </section>
-                <section>
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha-input">
-                </section>
-                <button id="login" type="submit" class="bg-blue-500 text-white px-8 py-2 rounded-md mt-4 hover:bg-blue-600">Login</button>
+        <div id="formulario-container" class="w-1/2 bg-white p-10">
 
-            </form>
-            <div class="mt-4">
-                <a href="#" class="text-blue-500 hover:underline">Esqueci minha senha</a>
-            </div>
-        </div> 
+            <div id="Formulario" class="shadow-xl">
+                <form action="">
+                    <h1 class="text-2xl font-semibold mb-6">Bem vindo de volta!</h1>
+
+                    <section class="email">
+                        <label for="email">Email:</label>
+                        <input class="shadow-md" type="email" id="email-input">
+                    </section>
+                    <section >
+                        <label for="senha">Senha:</label>
+                        <input class="shadow-md" type="password" id="senha-input">
+                        <div id="esqsenha" class="mt-4">
+                            <a href="#" class="text-blue-500 hover:underline">Esqueci minha senha</a>
+                        </div>
+                    </section>
+                    
+                    <button id="login" type="submit" class="bg-blue-500 text-white px-8 py-2 rounded-md mt-4 hover:bg-blue-600">Login</button>
+                
+                </form>
+
+            </div> 
+        </div>
     </div>
 
     <script src="https://cdn.tailwindcss.com"></script>

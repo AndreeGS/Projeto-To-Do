@@ -1,5 +1,75 @@
+body{
+    font-family: 'Inter';
+}
+
+#formulario-container{
+    background-color: #eaeaea;
+}
+
 section{
     display: flex;
     flex-direction: column;
 }
 
+
+#Formulario{
+    height: 80% ;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+}
+
+form{
+    padding: 60px;
+}
+
+form h1{
+    color: #183851;
+    font-size: 30px !important;
+    text-align: center;
+}
+
+form section{
+    margin-top: 5%;
+}
+
+section input{
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    height: 5vh;
+    padding-left: 3%;
+    padding-right: 3%;
+
+}
+
+#esqsenha{
+    margin-left: 65%;
+}
+
+section label{
+    color: #183851;
+    font-weight: 500;
+    font-size: 1.2vw;
+}
+
+#login{
+    margin-top: 10%;
+    width: 60%;
+    margin-left: 20%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#fotoFundo{
+    background-image: url(/img/img-login.png);
+    display: flex;
+    justify-content: end;
+}
+
+#fotoFundo h3{
+    color: azure;
+    font-size: 22px;
+    margin-top: 60% ;
+    padding-left: 4%;
+    padding-right: 4%;
+
+}
