@@ -7,21 +7,21 @@ async function Cadastro() {
     let email = document.getElementById("email").value;
     let senha = document.getElementById("senha").value;
 
-    // Verificar campos vazios
+    // Verificar inputs vazios
     if (!nome || !email || !senha) {
         alert('Por favor, preencha todos os campos.');
         return;
     }
 
     // Objeto com os dados do cadastro
-    var dadosCad = {
+    let dadosCad = {
         id: 0,
         nome: String(nome),
         email: String(email),
         password: String(senha)
     };
 
-    // Faça uma requisição à API usando o método fetch
+    // Requisição à API usando o método fetch
     try {
         const resposta = await fetch('https://sua-api.com/api/usuario/cadastrar', {
             method: 'POST',

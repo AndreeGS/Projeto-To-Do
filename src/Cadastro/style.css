@@ -70,7 +70,7 @@ main{
 
 }
 
-.container span {
+.gratuito{
     font-size: 1.1vw;
     margin-left: 18%;
     margin-top: -2%;
@@ -129,3 +129,17 @@ input:hover{
     background-color: #183851;
 }
 
+.possuiCadastro{
+    padding-top: 6%;
+    font-family: 'Inter';
+    font-size: 1.1vw;
+    opacity: 60%;
+    margin-left: 14%;
+    font-weight: 500;
+}
+
+.possuiCadastro a{
+    color: #02C986;
+    border-bottom: solid 3px #02C986;
+    opacity: 90% !important;
+}
