@@ -15,6 +15,21 @@ namespace API.Controllers
             _usuarioRepositorio = usuarioRepositorio;    
         }
 
+        [HttpPost("Cadastrar")]
+        public async Task<ActionResult<UsuarioModel>> Cadastrar([FromBody] UsuarioModel usuarioModel)
+        {
+            UsuarioModel usuario = await _usuarioRepositorio.Adicionar(usuarioModel);
+            return Ok(usuario);
+        }
+
+        [HttpGet("Login")]
+        public async Task<ActionResult<UsuarioModel>> Login(string email, string password)
+        {
+            UsuarioModel usuario = await _usuarioRepositorio.Login(email, password);
+
+            return Ok(usuario);
+        }
+
         [HttpGet]
         public async Task <ActionResult<List<UsuarioModel>>> BuscarUsuarios()
         {
@@ -22,10 +37,10 @@ namespace API.Controllers
             return Ok(usuario);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<UsuarioModel>> BuscarUsuarioPorId(int id)
+        [HttpGet("{email}")]
+        public async Task<ActionResult<UsuarioModel>> BuscarUsuarioPorEmail(string email)
         {
-            UsuarioModel usuario = await _usuarioRepositorio.BuscarUsuarioPorId(id);
+            UsuarioModel usuario = await _usuarioRepositorio.BuscarUsuarioPorEmail(email);
             return Ok(usuario);
         }
 
@@ -36,27 +51,21 @@ namespace API.Controllers
             return Ok(usuario);
         }
 
-        [HttpPost]
-        public async Task<ActionResult<UsuarioModel>> Cadastrar([FromBody] UsuarioModel usuarioModel)
-        {
-            UsuarioModel usuario = await _usuarioRepositorio.Adicionar(usuarioModel);
-            return Ok(usuario);
-        }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] UsuarioModel usuarioModel, int id)
+        public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] UsuarioModel usuarioModel, string email)
         {
-            usuarioModel.ID = id;
+            usuarioModel.Email = email;
 
-            UsuarioModel usuario = await _usuarioRepositorio.Atualizar(usuarioModel, id);
+            UsuarioModel usuario = await _usuarioRepositorio.Atualizar(usuarioModel, email);
             return Ok(usuario);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<UsuarioModel>> Deletar(int id)
+        public async Task<ActionResult<UsuarioModel>> Deletar(string email)
         {
 
-           bool apagado = await _usuarioRepositorio.Apagar(id);
+           bool apagado = await _usuarioRepositorio.Apagar(email);
             return Ok(apagado);
         }
     }

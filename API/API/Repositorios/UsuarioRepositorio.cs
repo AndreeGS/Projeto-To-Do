@@ -12,9 +12,9 @@ namespace API.Repositorios
         {
             _context = sistemaTarefasDbContext;
         }
-        public async Task<UsuarioModel> BuscarUsuarioPorId(int id)
+        public async Task<UsuarioModel> BuscarUsuarioPorEmail(string email)
         {
-            return await _context.Usuarios.FirstOrDefaultAsync(x => x.ID == id);
+            return await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == email);
         }
 
         public async Task<List<UsuarioModel>> BuscarUsuarios()
@@ -30,13 +30,13 @@ namespace API.Repositorios
             return usuario;
         }
 
-        public async Task<UsuarioModel> Atualizar(UsuarioModel usuario, int id)
+        public async Task<UsuarioModel> Atualizar(UsuarioModel usuario, string email)
         {
-            UsuarioModel usuarioPorId = await BuscarUsuarioPorId(id);
+            UsuarioModel usuarioPorId = await BuscarUsuarioPorEmail(email);
 
             if (usuarioPorId == null)
             {
-                throw new Exception($"Usuario para o ID:{id} não foi encontrado no banco de dados.");
+                throw new Exception($"Usuario para o email:{email} não foi encontrado no banco de dados.");
             }
 
             usuarioPorId.Nome = usuario.Nome;
@@ -50,13 +50,13 @@ namespace API.Repositorios
         }
 
 
-        public async Task<bool> Apagar(int id)
+        public async Task<bool> Apagar(string email)
         {
-            UsuarioModel usuarioPorId = await BuscarUsuarioPorId(id);
+            UsuarioModel usuarioPorId = await BuscarUsuarioPorEmail(email);
 
             if (usuarioPorId == null)
             {
-                throw new Exception($"Usuario para o ID:{id} não foi encontrado no banco de dados.");
+                throw new Exception($"Usuario para o email:{email} não foi encontrado no banco de dados.");
             }
 
             _context.Usuarios.Remove(usuarioPorId);
@@ -67,6 +67,25 @@ namespace API.Repositorios
         public async Task<List<TarefaModel>> BuscarTarefasDoUsuario(int id)
         {
             return await _context.Tarefas.Where(u => u.UsuarioID == id).ToListAsync();
+        }
+
+        public async Task<UsuarioModel> Login(string email, string senha)
+        {
+            UsuarioModel dado = await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == email);
+
+            if (dado == null)
+            {
+                throw new Exception("Usuário não encontrado ou senha incorreta");
+            }
+
+            if (dado.Email == email && dado.Password == senha)
+            {
+                return dado;
+            }
+            else
+            {
+                throw new Exception("Usuário não encontrado ou senha incorreta");
+            }
         }
     }
 }
