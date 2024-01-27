@@ -36,7 +36,7 @@ header{
 .conteudo p {
     font-size: 1.5vw;
     text-align: justify;
-    color: #fff;
+    color: #ffffff;
     font-weight: 300;
     margin-top: 5%;
 }
@@ -50,6 +50,10 @@ header{
     border-radius: 15px;
     margin-top: 16%;
     font-weight: 600;
+}
+
+.conteudo button:hover{
+    background-color: #065e4c;
 }
 
 /* Sobre */
