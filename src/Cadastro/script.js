@@ -16,16 +16,17 @@ async function Cadastro() {
     // Objeto com os dados do cadastro
     let dadosCad = {
         id: 0,
-        nome: String(nome),
-        email: String(email),
-        password: String(senha)
+        nome: nome,
+        email: email,
+        password: senha
     };
 
     // Requisição à API usando o método fetch
     try {
-        const resposta = await fetch('https://sua-api.com/api/usuario/cadastrar', {
+        const resposta = await fetch('https://apiprojetotodo.azure-api.net/api/Usuario/Cadastrar', {
             method: 'POST',
             headers: {
+                'accept': 'text/plain',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(dadosCad)
