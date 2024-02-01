@@ -23,7 +23,7 @@ async function Cadastro() {
 
     // Requisição à API usando o método fetch
     try {
-        const resposta = await fetch('https://apiprojetotodo.azure-api.net/api/Usuario/Cadastrar', {
+        const resposta = await fetch('https://apiprojetotodo.azurewebsites.net/api/Usuario/Cadastrar', {
             method: 'POST',
             headers: {
                 'accept': 'text/plain',
