@@ -14,7 +14,14 @@ namespace API.Repositorios
         }
         public async Task<UsuarioModel> BuscarUsuarioPorEmail(string email)
         {
-            return await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == email);
+            try
+            {
+                return await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == email);
+            }
+            catch 
+            {
+                throw new Exception("Email não cadastrado");
+            }
         }
 
         public async Task<List<UsuarioModel>> BuscarUsuarios()
