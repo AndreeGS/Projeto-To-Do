@@ -31,6 +31,9 @@ namespace API.Repositorios
 
         public async Task<UsuarioModel> Adicionar(UsuarioModel usuario)
         {
+            usuario.Password = BCrypt.Net.BCrypt.HashPassword(usuario.Password);
+
+
             await _context.Usuarios.AddAsync(usuario);
             await _context.SaveChangesAsync();
 
@@ -85,13 +88,15 @@ namespace API.Repositorios
                 throw new Exception("Usuário não encontrado ou senha incorreta");
             }
 
-            if (dado.Email == email && dado.Password == senha)
+            bool senhaOK = BCrypt.Net.BCrypt.Verify(senha, dado.Password);
+
+            if (senhaOK)
             {
                 return dado;
             }
             else
             {
-                throw new Exception("Usuário não encontrado ou senha incorreta");
+                throw new Exception("Email ou senha incorreta");
             }
         }
     }
