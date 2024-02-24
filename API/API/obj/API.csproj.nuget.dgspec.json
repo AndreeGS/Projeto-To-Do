@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj": {}
+    "C:\\Users\\Andre\\Documents\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj": {
+    "C:\\Users\\Andre\\Documents\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Andre\\Documents\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\OneDrive\\Documentos\\GitHub\\Projeto-To-Do\\API\\API\\obj\\",
+        "projectPath": "C:\\Users\\Andre\\Documents\\GitHub\\Projeto-To-Do\\API\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Andre\\Documents\\GitHub\\Projeto-To-Do\\API\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -84,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
