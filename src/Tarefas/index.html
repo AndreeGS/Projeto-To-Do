@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../Home/baseNav/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>To do</title>
+</head>
+<body>
+    <nav class="bg-marinho flex flex-row">
+        <section class="logo">
+            <img src="../../img/logo (2).png" alt="To do">
+        </section>
+
+        <section class="navegacao">
+            <ul class="flex flex-row">
+                <a href="../Home/Index.html" class="decoration-inherit">
+                    <li>Home</li>
+                </a>
+                <a href="" class="decoration-inherit">
+                    <li>Sobre</li>
+                </a>
+                <a href="" class="decoration-inherit">
+                    <li>Login</li>
+                </a>
+                <a href="" class="decoration-inherit">
+                    <li>Cadastro</li>
+                </a>                
+            </ul>
+        </section>
+    </nav>
+
+    <main>
+        <aside>
+            <div class="nomeUsuario">
+                <h1>Olá, Lucas!</h1>
+                <p>Bem vindo(a) de volta.</p>
+            </div>
+
+            <section class="calendario">
+                <div class="box">
+                    <header>
+                        <p class="dataAtual"></p>
+                  
+                        <div class="icones">
+                            <span id="voltar" class="iconeVoltar">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span id="avancar" class="iconeAvancar">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </div>
+                    </header>
+
+                    <div class="contCalandario">
+                        <ul class="semanas">
+                            <li>Dom</li>
+                            <li>Seg</li>
+                            <li>Ter</li>
+                            <li>Qua</li>
+                            <li>Qui</li>
+                            <li>Sex</li>
+                            <li>Sab</li>
+                        </ul>
+
+                        <ul class="dias">
+                            
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            
+                <button class="btnTarefa" id="btnTarefa">ADICIONAR TAREFA</button>
+           
+        </aside>
+
+        <section class="mainTarefas">
+            <h1>Tarefas do Dia</h1>
+            <div class="container">
+                
+                <div class="kanbanBlock" id="pendente" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>A Fazer</h2>
+                </div>
+
+                <div class="kanbanBlock" id="processo" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Em Processo</h2>
+                </div>
+
+                <div class="kanbanBlock" id="concluido" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h2>Concluído</h2>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--
+                <h1>Tarefas do Dia</h1>
+                <div class="task">
+                    <section>
+                        <h2>Relatório de administração</h2>
+                        <span class="descricao">
+                            <p>Descrição do conteudo aqui embaixo, Descrição do conteudo.Descrição do conteudo aqui embaixo .Descrição do conteudo</p>
+                        </span>
+                    </section>
+                    
+                    <section class="interacao">
+                        <button>
+                            <img src="../../img/editar.png" alt="editar">
+                        </button>
+
+                        <button>
+                            <img src="../../img/concluido.png" alt="concluído">
+                        </button>
+
+                        <button>
+                            <img src="../../img/excluir.png" alt="excluir">
+                        </button>
+                    </section>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <div class="boxModal">
+            <dialog class="modal">
+                <div class= "containerTask">
+                    <h1 class="CreateH1">Nova Tarefa</h1>
+                    <div class="inputBox">
+                        <label for="tarefaInput">Adicione a sua tarefa:</label>
+                        <section class="input">
+                            <input type="text" id="tarefaInput" placeholder="O que você vai fazer?" maxlength="22">
+                            <button type="button" id="btnAdicionar">+</button>
+                        </section>
+
+                        <div class="select">
+                            <div id="category-select" style="flex-direction: row;">
+                                <label for="options-view-button tarefaInput">Categoria:</label>
+                                <input type="checkbox" id="options-view-button" class="options-view-button">
+
+                                <div id="select-button">
+                                    <div id="selected-value">Selecione a categoria</div>
+
+                                    <div id="chevrons">
+                                        <i class="fa-solid fa-chevron-down" style="color: #042b4a;"></i>
+                                        <i class="fa-solid fa-chevron-up" style="color: #042b4a;"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul id="options">
+                                <li class="option">
+                                    <input 
+                                        type="radio"
+                                        name="category"
+                                        value="fazer"
+                                        data-label="A Fazer"
+                                        class="aFazer"
+                                    >
+                                    <span class="label">A Fazer</span>
+                                </li>
+                                <li class="option">
+                                    <input 
+                                        type="radio"
+                                        name="category"
+                                        value="fazendo"
+                                        data-label="Em Processo"
+                                        class="fazendo"
+                                    >
+                                    <span class="label">Em processo</span>
+                                </li>
+                                <li class="option">
+                                    <input 
+                                        type="radio"
+                                        name="category"
+                                        value="concluido"
+                                        data-label="Concluído"
+                                    >
+                                    <span class="label">Concluído</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btnAcao">
+                        <button class="addTask" id="addTask" type="button">Adicionar Tarefa</button>
+                        <button class="cancelar" id="cancelar" type="button">Cancelar</button>
+                    </div>
+                </div>
+            </dialog>
+        </div>
+    </main>
+
+    <footer class="bg-marinho flex flex-row">
+        <p>Desenvolvido por André Guilherme & Tayane Milagres | Todos os Direitos Reservados</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/fe8eb85698.js" crossorigin="anonymous"></script> 
+    <script src="script.js"></script>
+    <script src="tarefa.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="dropdown.js"></script>
+</body>
+</html>

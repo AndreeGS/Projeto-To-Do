@@ -1,0 +1,496 @@
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Aside */
+aside{
+    background-color: #17466C;
+    width: 22vw;
+    height: 100vh;
+}
+
+.nomeUsuario h1{
+    font-size: 3vw;
+    font-weight: 600;
+    color: #02C986;
+    font-family: 'Inter';
+}
+
+.nomeUsuario p{
+    color: #fff;
+    font-size: 1.4vw;
+    font-family: 'Inter';
+    margin-top: -4%;
+}
+
+.nomeUsuario{
+    width: 95%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+aside button{
+    background-color: #02C986;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 5px;
+    font-family: 'Inter';
+    color: #ffff;
+    font-weight: 600;
+    margin-left: 5%;
+    font-size: 1.2vw;
+}
+
+aside button:hover{
+    background-color: #042b4a;
+    color: #fff;
+}
+
+/* Calendario */
+.box{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 20vw;
+    background-color: #fff;
+    border-radius: 10px;
+    
+}
+
+.box header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6% 6% 2%;
+    width: 100%;
+}
+
+
+.contCalandario ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contCalandario{
+    padding: 10px;
+}
+
+.contCalandario .dias{
+    margin-bottom: 5%;
+    color: #151515e0;
+    font-family: 'Inter';
+    font-weight: 500;
+}
+
+.contCalandario .dias li{
+    margin-top: 5%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.contCalandario .semanas{
+    font-weight: 500;
+    font-size: 1.2vw;
+    color: #141282;
+    text-align: center;
+}
+
+.contCalandario ul li{
+    position: relative;
+    width: calc(100%/7);
+    font-family: 'Inter';
+    font-size: 1vw;
+}
+
+.contCalandario ul li::before{
+    position: absolute;
+    content: "";
+    height: 2.2vw;
+    width: 2.2vw;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    
+}
+
+.dias li:hover::before{
+    background: #f2f2f2;
+}
+
+.dias li.inativo{
+    color: #aaa;
+}
+
+.dias li.ativo{
+    color: #fff;
+}
+
+.dias li.ativo::before{
+    background-color: #0ca0a8c4;
+
+}
+
+.fa-chevron-left, .fa-chevron-right{
+    font-size: 1.3vw;
+    color: #042a4ae0;
+    height: 2vw;
+    width: 2vw;  
+    padding-top: 9%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fa-chevron-left:last-child , .fa-chevron-right:last-child{
+    margin-right: -5px;
+
+}
+
+.fa-chevron-left:hover, .fa-chevron-right:hover{
+    background-color: #eaeaead9;
+}
+
+.dataAtual{
+    font-size: 1.5vw;
+    font-weight: 600;
+    font-family: 'Poppins';
+    color: #042b4a;
+}
+
+header .icones span{
+    margin: 1px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Main 
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;   
+}
+
+.container h1{
+    font-size: 2.4vw;
+    font-weight: 600;
+    font-family: 'Inter';
+    color: #17466C;
+    border-bottom: 3px solid #02C986;
+    text-align: center;
+    margin-left: 8%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 20vw;
+    height: 7.5vh;
+}
+
+.container .task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+}
+*/
+
+/* Kanban */
+
+main{
+    background-color: #ECECEC;
+}
+
+.mainTarefas h1{
+    font-size: 2vw;
+    font-weight: 600;
+    font-family: 'Inter';
+    color: #17466C;
+    border-bottom: 3px solid #02C986;
+    text-align: center;
+    margin-left: 38%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 20vw;
+    height: 6vh;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 5%;
+}
+
+.kanbanBlock{
+    width: 23vw;
+    background-color: #fff;
+    height: auto;
+    min-height: 7.5vh;
+    text-align: center;
+    margin: 2%;
+    border-radius: 10px;
+    box-shadow: 2px 7px 24px -4px rgb(200, 200, 200);
+}
+
+.kanbanBlock h2{
+    font-family: 'Inter';
+    font-weight: 600;
+}
+
+#pendente h2{
+    color: #05afe3;
+    border: 1.5px solid #03d1ffbc;
+    width: 10vw;
+    border-radius: 20px;
+    margin-top: 2%;
+    margin-left: 25%;
+    font-size: 1.2vw;
+}
+
+#processo h2{
+    color: #c5ae05e6;
+    border: 1.5px solid #d5d213db;
+    width: 10vw;
+    border-radius: 20px;
+    margin-top: 2%;
+    margin-left: 25%;
+    font-size: 1.2vw;
+}
+
+#concluido h2{
+    color: #039857e6;
+    border: 1.5px solid #039857e6;
+    width: 10vw;
+    border-radius: 20px;
+    margin-top: 2%;
+    margin-left: 25%;
+    font-size: 1.2vw;
+}
+
+/* Modal Tarefas */
+.containerTask{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.inputBox input{
+    width: 25vw;
+    height: 4.5vh;
+    padding: 2%;
+    border-radius: 6px;
+    background-color: #eaeaea;
+    font-size: 1.2vw;
+    outline: none;
+}
+
+.inputBox input:hover{
+    background-color: #e2e2e2;
+}
+
+.inputBox button{
+    background-color: #042b4a;
+    width: 2vw;
+    height: 4.5vh;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Inter';
+}
+
+.inputBox button:hover{
+    background-color: #02C986;
+}
+
+.inputBox label{
+    font-size: 1.2vw;
+    font-family: 'Inter';
+    font-weight: 500;
+    color: #042b4a;
+    margin-bottom: 2%;
+}
+
+.CreateH1{
+    display: flex;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 1.7vw;
+    font-weight: 600;
+    color: #042b4a;
+    border-bottom: 2px solid #02C986;
+    width: 15vw;
+    padding-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.btnAcao{
+    margin-top: 5%;
+    margin-left: 9%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+#addTask{
+    background-color: #17466C;
+    color: #ffff;
+    width: 13vw;
+    height: 4.6vh;
+    border-radius: 5px;
+    font-size: 1.3vw;
+    margin-left: -13%
+}
+
+#addTask:hover{
+    background-color: #02C986;
+    font-weight: 600;
+}
+
+#cancelar{
+    background-color: #1f5b8bcd;
+    color: #ffff;
+    width: 13vw;
+    height: 4.6vh;
+    border-radius: 5px;
+    font-size: 1.3vw;
+}
+
+#cancelar:hover{
+    background-color: #042b4a;
+    font-weight: 600;
+}
+
+
+dialog{
+    width:40vw;
+    height: auto;
+    max-height: 70vh;
+    margin-top: 10%;
+    margin-left: 30%;
+    border-radius: 10px;   
+    position: relative;
+}
+
+
+/* Dropdown */
+
+#select-button {
+    height: 4.5vh;
+    width: 27.5vw;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    background-color: #eaeaea;
+    color: #9499a0;
+    font-family: 'Inter';
+    font-size: 1.1vw;
+}
+
+#options-view-button{
+    width: 0px;
+    position:absolute;
+    display: block;
+
+}
+
+.fa-solid fa-chevron-down{
+    color: #042b4a;
+}
+
+#chevrons .fa-chevron-up{
+    display: none;
+}
+
+#category-select:has(#options-view-button:checked) label,
+.options-view-button:checked + #select-button #chevrons {
+    color: #042b4a;
+}
+
+#category-select:has(#options-view-button:checked) label,
+#options-view-button:checked + #select-button .fa-chevron-down{
+    display: none;
+}
+
+#category-select:has(#options-view-button:checked) label,
+#options-view-button:checked + #select-button .fa-chevron-up{
+    display: block;
+}
+
+#category-select {
+    position: relative;
+}
+
+#options-view-button {
+    all: unset;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#options{
+flex-direction: row;
+background-color: #eaeaea;
+width: 27.5vw;
+margin-top: 1%;
+border-radius: 8px;
+text-align: center;
+display: none;
+
+}
+.option{
+    border-bottom: 1px solid #dadada;
+    border-radius: 8px;
+    position: relative;
+
+}
+
+
+#option span{
+    font-size: 1.1vw;
+    font-family: 'Inter';
+    
+}
+
+.option:has(input:checked),
+.option:hover{
+    background-color: #e1e1e1;
+    color: #042b4a;
+}
+
+.option input[type="radio"] {
+    all: unset;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+
+/* Quando clicar as opções aparecerem */
+
+#category-select:has(#options-view-button:checked) + #options {
+    display: block;
+}
+
+.select:has(.option input:checked) #selected-value {
+    color: #000a12;
+}
