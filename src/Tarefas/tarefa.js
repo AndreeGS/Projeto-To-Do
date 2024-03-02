@@ -17,7 +17,25 @@ async function novaTask(){
     let categoria = document.querySelectorAll('.option span');
     let idTask = categoria.id
 
-    
+    const apiUrl = 'urlAPI'
+
+    fetch(apiUrl, {
+        headers: {
+            ID: 1,
+            Nome: 'Exemplo',
+            Descricao: 'Exemplo de descrição',
+            Status: 'EmAndamento', 
+            UsuarioID: 42
+        }
+    })
+
+    .then(resposta => {
+
+    })
+
+    .catch(erro => {
+        console.log('Erro ao tentar obter dados da API: ', erro)
+    })
 
 
 }
