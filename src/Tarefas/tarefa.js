@@ -1,29 +1,4 @@
-
-// Cards de Tasks
-/*const conteudoModal = `
-    <div id="modal" class="modal">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class= "containerTask">
-                <h1 class="CreateH1">Nova Tarefa</h1>
-                <div class="inputBox">
-                    <label for="tarefaInput">Adicione a sua tarefa:</label>
-                    <section class="input">
-                        <input type="text" id="tarefaInput" placeholder="O que você vai fazer?" maxlength="22">
-                        <button type="button" id="btnAdicionar">+</button>
-                    </section>
-                </div>
-
-                <div class="btnAcao">
-                    <button class="addTask" id="addTask" type="button">Adicionar Tarefa</button>
-                    <button class="cancelar" id="cancelar" type="button">Cancelar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-      
-`
-*/
-
+//Modal
 const btnTarefa = document.getElementById("btnTarefa")
 const modal = document.querySelector("dialog")
 const btnCancelar = document.getElementById('cancelar')
@@ -35,4 +10,48 @@ btnTarefa.onclick = function (){
 btnCancelar.onclick = function (){
     modal.close()
 }
+
+//Tarefas
+async function novaTask(){
+    let novaTarefa = document.getElementById('tarefaInput').value;
+    let categoria = document.querySelectorAll('.option span');
+    let idTask = categoria.id
+
+    
+
+
+}
+
+function editarTarefa(){
+    let editTarefa = document.getElementById('editar')
+
+    editTarefa.addEventListener("click", ()=>{
+        //Abre o adicionar tarefa com os dados da tarefa para editar
+        // Salva com as novas alterações
+    })
+}
+
+function concluirTarefa(){
+    let concTarefa = document.getElementById('concluido');
+    let tarefaConcluida = document.querySelectorAll('.dinamicTask span')
+
+    concTarefa.addEventListener("click", ()=>{
+        tarefaConcluida.forEach(tarefa => {
+            // Faz um risco no meio da descrição
+        })
+
+    })
+}
+
+function excluirTarefa(){
+    let excTarefa = document.getElementById('excluir')
+
+    excTarefa.addEventListener("click", ()=>{
+        //Exclui a tarefa no banco e na visulização
+
+    })
+}
+
+
+
 

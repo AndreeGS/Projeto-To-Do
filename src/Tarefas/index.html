@@ -87,10 +87,36 @@
                 
                 <div class="kanbanBlock" id="pendente" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <h2>A Fazer</h2>
+                    <div class="task">
+                        <section class="dinamicTask">
+                            <h3>Relatório de administração</h2>
+                            <span class="descricao">
+                                <p>Descrição do conteudo aqui embaixo, Descrição do conteudo.Descrição do conteudo de</p>
+                            </span>
+
+                            <section class="interacao">
+                                <div class="btns">
+                                    <button>
+                                        <img src="../../img/editar.png" id="editar" alt="Editar" title="Editar">
+                                    </button>
+            
+                                    <button>
+                                        <img src="../../img/concluido.png" id="concluido" alt="Concluído" title="Concluído">
+                                    </button>
+            
+                                    <button>
+                                        <img src="../../img/excluir.png" id="excluir" alt="Excluir" title="Excluir">
+
+                                </div>
+                                
+                            </section>
+                        </section>
+                        
+                    </div>
                 </div>
 
                 <div class="kanbanBlock" id="processo" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <h2>Em Processo</h2>
+                    <h2>Em Andamento</h2>
                 </div>
 
                 <div class="kanbanBlock" id="concluido" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -174,17 +200,17 @@
                                         data-label="A Fazer"
                                         class="aFazer"
                                     >
-                                    <span class="label">A Fazer</span>
+                                    <span class="label" id="0">A Fazer</span>
                                 </li>
                                 <li class="option">
                                     <input 
                                         type="radio"
                                         name="category"
                                         value="fazendo"
-                                        data-label="Em Processo"
+                                        data-label="Em andamento"
                                         class="fazendo"
                                     >
-                                    <span class="label">Em processo</span>
+                                    <span class="label" id="1">Em andamento</span>
                                 </li>
                                 <li class="option">
                                     <input 
@@ -193,7 +219,7 @@
                                         value="concluido"
                                         data-label="Concluído"
                                     >
-                                    <span class="label">Concluído</span>
+                                    <span class="label" id="2">Concluído</span>
                                 </li>
                             </ul>
                         </div>

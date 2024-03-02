@@ -15,7 +15,7 @@ aside{
 }
 
 .nomeUsuario h1{
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: 600;
     color: #02C986;
     font-family: 'Inter';
@@ -225,7 +225,7 @@ main{
 
 .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-direction: row;
     margin-left: 5%;
@@ -493,4 +493,73 @@ display: none;
 
 .select:has(.option input:checked) #selected-value {
     color: #000a12;
+}
+
+/* Tarefa Dinâmica */
+.dinamicTask{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 94%;
+    text-align: justify;
+    margin-left: 2.5%;
+    border-radius: 9px;
+    border: 1px solid #d5d5d582;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.dinamicTask h3{
+    font-weight: 600;
+    color: #055394;
+    font-size: 1.3vw;
+    font-family: 'Inter';
+    padding: 2%;
+
+}
+
+.dinamicTask span{
+    font-size: 1vw;
+    font-family: 'Inter';
+    padding: 2%;
+}
+
+.interacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns{
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btns button {
+    margin-right: 2vw; 
+    color: #055394;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 4vh; /* Ajuste conforme necessário */
+    margin-bottom: 7%;
+}
+
+.btns button img{
+    width: 1.3vw;
+    margin-bottom: 2%;
+}
+
+.btns button:last-child {
+    margin-right: 0;
+}
+
+.btns button:hover{
+    background-color: #02C986;
+    width: 2.3vw;
+    height: 4.6vh;
+    border-radius: 50%;
 }
