@@ -282,6 +282,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
 }
 
 .inputBox{
@@ -382,7 +383,7 @@ main{
 dialog{
     width:40vw;
     height: auto;
-    max-height: 70vh;
+    max-height: 65vh;
     margin-top: 10%;
     margin-left: 30%;
     border-radius: 10px;   
