@@ -1,24 +1,24 @@
-
-form.addEventListener('submit', (e) =>{
-    e.preventDefault();
-})
-
 var btnLogin = document.getElementById("btnLogin");
 
-btnLogin.addEventListener("click", login());
+btnLogin.addEventListener("click", function(event) {
+    event.preventDefault();
+    console.log("Botão de login clicado");
+    login();
+});
+
 
 async function login(){
     let email = document.getElementById("email-input").value;
     let senha = document.getElementById("senha-input").value;
     
-    var credentials = {
+    let credentials = {
         email: email,
         password: senha
-    }
+    };
 
     try {
-        const answer = await fetch('https://apiprojetotodo.azurewebsites.net/api/Usuario/Login', {
-            method: 'GET',
+        const response = await fetch('https://apiprojetotodo.azurewebsites.net/api/Usuario/Login', {
+            method: 'POST',
             headers: {
                 'accept': 'text/plain',
                 'Content-Type': 'application/json'
@@ -26,16 +26,21 @@ async function login(){
             body: JSON.stringify(credentials)
         });
 
-        if (answer.ok) {
+        if (response.ok) {
             try {
-                const valid = await resposta.json();
+                const valid = await response.json();
                 console.log('Usuário logado:', valid);
+                alert("Certo")
+
+                sessionStorage.setItem('token', valid.token)
             } 
             catch (error) {
                 console.error('Erro ao processar resposta da API. Erro ao analisar JSON:', error);
+                alert("erro")
             }
         } else {
-            console.error('Erro ao fazer login:', resposta.statusText);
+            console.error('Erro ao fazer login:', response.statusText);
+            alert("erro")
         }
     } catch (error) {
         console.error('Erro ao processar requisição:', error);

@@ -130,3 +130,4 @@ C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\refint\
 C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\API.pdb
 C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\API.genruntimeconfig.cache
 C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\ref\API.dll
+C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\bin\Release\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

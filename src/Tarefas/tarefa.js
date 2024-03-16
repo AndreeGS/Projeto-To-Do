@@ -17,27 +17,37 @@ async function novaTask(){
     let categoria = document.querySelectorAll('.option span');
     let idTask = categoria.id
 
-    const apiUrl = 'urlAPI'
+    let apiUrl = 'https://apiprojetotodo.azurewebsites.net/api/Tarefa'
 
-    fetch(apiUrl, {
-        headers: {
-            ID: 1,
-            Nome: 'Exemplo',
-            Descricao: 'Exemplo de descrição',
-            Status: 'EmAndamento', 
-            UsuarioID: 42
+    let token = sessionStorage.getItem(token);
+
+    let dados = {
+        ID: 0,
+        Nome: 'Exemplo',
+        Descricao: 'Exemplo de descrição',
+        Status: '0', 
+        UsuarioID: 11
+    };
+
+
+    try {
+        let response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dados)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Erro ao tentar criar tarefa: ${response.statusText}`);
         }
-    })
 
-    .then(resposta => {
-
-    })
-
-    .catch(erro => {
-        console.log('Erro ao tentar obter dados da API: ', erro)
-    })
-
-
+        
+    } catch (error) {
+        console.error('Erro ao tentar criar tarefa: ', error);
+    }
 }
 
 function editarTarefa(){

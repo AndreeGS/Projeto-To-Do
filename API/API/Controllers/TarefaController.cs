@@ -1,11 +1,13 @@
 ﻿using API.Models;
 using API.Repositorios.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TarefaController : Controller
     {
         private readonly ITarefaRepositorio _tarefaRepositorio;

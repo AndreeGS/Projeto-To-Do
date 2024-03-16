@@ -5,6 +5,7 @@ C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\PubTmp\
 C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\PubTmp\Out\API.runtimeconfig.json
 C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\PubTmp\Out\API.pdb
 C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\PubTmp\Out\BCrypt.Net-Next.dll
+C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
 C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 C:\Users\Andre\Documents\GitHub\Projeto-To-Do\API\API\obj\Release\net6.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll

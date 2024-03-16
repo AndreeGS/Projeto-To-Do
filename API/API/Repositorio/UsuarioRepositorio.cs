@@ -1,4 +1,5 @@
 ﻿using API.Data;
+using API.Dtos;
 using API.Models;
 using API.Repositorios.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -79,19 +80,20 @@ namespace API.Repositorios
             return await _context.Tarefas.Where(u => u.UsuarioID == id).ToListAsync();
         }
 
-        public async Task<UsuarioModel> Login(string email, string senha)
+        public async Task<UsuarioModel> Login(LoginDto login)
         {
-            UsuarioModel dado = await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == email);
+            UsuarioModel dado = await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == login.email);
 
             if (dado == null)
             {
                 throw new Exception("Usuário não encontrado ou senha incorreta");
             }
 
-            bool senhaOK = BCrypt.Net.BCrypt.Verify(senha, dado.Password);
+            bool senhaOK = BCrypt.Net.BCrypt.Verify(login.password, dado.Password);
 
             if (senhaOK)
             {
+
                 return dado;
             }
             else

@@ -1,5 +1,8 @@
-﻿using API.Models;
+﻿using API.Dtos;
+using API.Models;
 using API.Repositorios.Interfaces;
+using API.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,27 +13,41 @@ namespace API.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
-        public UsuarioController(IUsuarioRepositorio usuarioRepositorio) 
+        private readonly ITokenService _tokenService;
+        public UsuarioController(IUsuarioRepositorio usuarioRepositorio, ITokenService tokenService) 
         {
-            _usuarioRepositorio = usuarioRepositorio;    
+            _usuarioRepositorio = usuarioRepositorio;   
+            _tokenService = tokenService;
         }
 
         [HttpPost("Cadastrar")]
+        [AllowAnonymous]
         public async Task<ActionResult<UsuarioModel>> Cadastrar([FromBody] UsuarioModel usuarioModel)
         {
             UsuarioModel usuario = await _usuarioRepositorio.Adicionar(usuarioModel);
             return Ok(usuario);
         }
 
-        [HttpGet("Login")]
-        public async Task<ActionResult<UsuarioModel>> Login(string email, string password)
-        {
-            UsuarioModel usuario = await _usuarioRepositorio.Login(email, password);
+        [HttpPost("Login")]
+        [AllowAnonymous]
 
-            return Ok(usuario);
+        public async Task<ActionResult<dynamic>> Login(LoginDto login)
+        {
+            UsuarioModel usuario = await _usuarioRepositorio.Login(login);
+
+            var token =  _tokenService.GenerateToken(login);
+
+            if (token == null)
+            {
+                return Unauthorized();
+            }
+
+            return Ok(new { Usuario = usuario, Token = token });
+
         }
 
         [HttpGet]
+        [Authorize]
         public async Task <ActionResult<List<UsuarioModel>>> BuscarUsuarios()
         {
             List<UsuarioModel> usuario = await _usuarioRepositorio.BuscarUsuarios();
@@ -38,6 +55,8 @@ namespace API.Controllers
         }
 
         [HttpGet("{email}")]
+        [Authorize]
+
         public async Task<ActionResult<UsuarioModel>> BuscarUsuarioPorEmail(string email)
         {
             UsuarioModel usuario = await _usuarioRepositorio.BuscarUsuarioPorEmail(email);
@@ -45,6 +64,8 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}/Tarefas")]
+        [Authorize]
+
         public async Task<ActionResult<List<TarefaModel>>> BuscarTarefasDoUsuario(int id)
         {
             List<TarefaModel> usuario = await _usuarioRepositorio.BuscarTarefasDoUsuario(id);
@@ -53,6 +74,8 @@ namespace API.Controllers
 
 
         [HttpPut("{id}")]
+        [Authorize]
+
         public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] UsuarioModel usuarioModel, string email)
         {
             usuarioModel.Email = email;
@@ -62,6 +85,8 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
+
         public async Task<ActionResult<UsuarioModel>> Deletar(string email)
         {
 
